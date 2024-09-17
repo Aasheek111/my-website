@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.arvo-regular {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .arvo-bold {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .arvo-regular-italic {
+    font-family: "Arvo", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .arvo-bold-italic {
+    font-family: "Arvo", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .container-fluid{
+    font-size: 1.25rem;
+  }
+  .navbar-brand{
+    font-size: 1.5rem;
+  }
+  
+  #particles-js{
+
+    min-height: 100vh;
+    position:absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    background-color: #527cec;
+  }
+  #name{
+    color: rgb(255, 255, 255);
+    margin-top: 15rem;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  #hello{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+
+  }
+  #learnmore{
+    border: 2px solid white;
+    font-size: 1.25rem;
+    color: white;
+    margin: 0 auto;
+    display:block;
+    border-radius: 1rem;
+    max-width: 8rem;
+    text-decoration: none;
+    padding: 2px;
+    }
+
+    #home{
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    #resume{
+      width: 100%;
+      height: auto;
+    }
+    #prgs{
+
+      height: 7vh;
+      margin-bottom: 5px;
+    }
+    
