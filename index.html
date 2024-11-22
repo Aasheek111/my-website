@@ -144,34 +144,55 @@ inspires me. His ability to perform at the highest level shows what hard work an
     </section>
 
 
-  <!-- Portfolio -->
-    <section id="portfolio">
-      <div class="container">
-<div class="row justify-content-center py-5">
-  <h1 id="portfoliotitle"> What have I done?</h1>
-</div>
-
-      <div class="progress row "  id="prgs" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-       <h3 style="padding: 6px; justify-content: center;">Bootstrap</h3> <div class="progress-bar" style="width: 50%; border-radius:10px ;margin-left: 15px"> 50%</div>
-      </div>
-
-      
-      <div class="progress row" id="prgs" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-        <h3 style="padding: 4px; justify-content: center;">Javascript</h3><div class="progress-bar bg-info" style="width: 65% ;border-radius:10px; margin-left: 15px;">65%</div>
-      </div>
-
-         
-      <div class="progress row" id="prgs" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-        <h3 style="padding: 4px; justify-content: center;">C</h3><div class="progress-bar bg-warning" style="width: 85% ;border-radius:10px; margin-left: 7.5rem;">85%</div>
-      </div>
-
-         
-      <div class="progress row" id="prgs" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-        <h3 style="padding: 4px; justify-content: center;">HTML/CSS</h3><div class="progress-bar bg-danger" style="width: 75% ;border-radius:10px; margin-left: 15px;">75%</div>
-      </div>
-    
+  <!-- Portfolio Section -->
+<section id="portfolio" style="background-color: #f8f9fa; padding: 40px 0;">
+  <div class="container">
+    <div class="row justify-content-center py-3">
+      <h1 id="portfoliotitle" style="color: #333; font-weight: bold; margin-bottom: 30px;">What Have I Done?</h1>
     </div>
-    </section>
+
+    <!-- Progress Bars -->
+    <div class="progress-container">
+      <!-- Bootstrap -->
+      <div class="progress-item">
+        <h3>Bootstrap</h3>
+        <div class="progress">
+          <div class="progress-bar" id="prgs-bootstrap" style="width: 50%;">50%</div>
+        </div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="progress-item">
+        <h3>JavaScript</h3>
+        <div class="progress">
+          <div class="progress-bar bg-info" id="prgs-javascript" style="width: 65%;">65%</div>
+        </div>
+      </div>
+
+      <!-- C -->
+      <div class="progress-item">
+        <h3>C</h3>
+        <div class="progress">
+          <div class="progress-bar bg-warning" id="prgs-c" style="width: 85%;">85%</div>
+        </div>
+      </div>
+
+      <!-- HTML/CSS -->
+      <div class="progress-item">
+        <h3>HTML/CSS</h3>
+        <div class="progress">
+          <div class="progress-bar bg-danger" id="prgs-htmlcss" style="width: 75%;">75%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button to Update Progress -->
+    <div class="row py-4 justify-content-center">
+      <button class="btn btn-primary" onclick="updateProgress()">Update Progress</button>
+    </div>
+  </div>
+</section>
+
 
     <section id="contact">
       <div class="container">
@@ -209,6 +230,25 @@ inspires me. His ability to perform at the highest level shows what hard work an
     </footer>
 
     <!-- JS libraries -->
+    <script>
+      function updateProgress() {
+        const progressData = {
+          bootstrap: Math.min(100, Math.random() * 100),
+          javascript: Math.min(100, Math.random() * 100),
+          c: Math.min(100, Math.random() * 100),
+          htmlcss: Math.min(100, Math.random() * 100),
+        };
+    
+        // Update progress bars dynamically
+        Object.entries(progressData).forEach(([key, value]) => {
+          const progressBar = document.querySelector(`#prgs-${key}`);
+          progressBar.style.width = `${value}%`;
+          progressBar.textContent = `${Math.round(value)}%`;
+        });
+      }
+    </script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+    </script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/app.js"></script>
     <script src="js/bootstrap.min.js"></script>
